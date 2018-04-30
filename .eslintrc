@@ -18,7 +18,8 @@
                 "optionalDependencies": false, 
                 "peerDependencies": false
             }
-        ]
+        ],
+        "linebreak-style": 0
     },
 
     "extends": "airbnb"
