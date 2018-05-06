@@ -1,7 +1,14 @@
 // breakpoints
-$sm-breakpoint: 768px;
+$sm: 1395px;
+$xs: 550px;
 
 // colors
-$main-color: #dd020d;
-$background-color: #050000;
-$text-color: #7c7c7c;
+$primary: #00BE54;
+$secondary: #B2EBCB;
+$white: #FFFFFF;
+$black: #191919;
+$hover: #007332;
+
+// fonts 
+$lato: Lato, Arial, Helvetica, sans-serif;
+$roboto: Roboto, Arial, Helvetica, sans-serif;
