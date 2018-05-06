@@ -26,8 +26,8 @@
             height: 50px;
         }
     
-        &:hover,
-        &.active {
+        &.active,
+        &.hovered {
             border-color: $hover;
             background: $hover;
             transition: all .3s;
