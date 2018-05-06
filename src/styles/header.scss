@@ -4,8 +4,15 @@ header {
     color: $white;
 
     .container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         align-items: center;
         justify-content: space-between;
+
+        @media screen and (max-width: $sm) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 
     .logo {
