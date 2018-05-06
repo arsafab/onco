@@ -1,3 +1,5 @@
+@import './_hamburger';
+
 header {
     width: 100%;
     background: $primary;
@@ -124,6 +126,10 @@ header {
     .btn-group {
         display: flex;
         width: 18%;
+
+        @media screen and (min-width: $sm) {
+            justify-content: flex-end;
+        }
 
         @media screen and (max-width: $sm) {
             position: relative;
