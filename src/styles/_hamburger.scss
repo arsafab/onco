@@ -1,0 +1,108 @@
+.navbar-toggle {
+    width: auto;
+    min-height: 100px;
+    display: none;
+    
+    @media screen and (max-width: $sm) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: .3rem solid $white;
+        border-radius: 0.5rem;
+        background: transparent;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+
+        @media screen and (max-width: $xs) {
+            width: 50px;
+            height: 50px;
+        }
+    
+        &:hover,
+        &.active {
+            border-color: $hover;
+            background: $hover;
+            transition: all .3s;
+        }      
+
+        &.active {
+            .icon-bar {
+                transition-delay: 0.22s;
+                background-color: transparent;
+        
+                &::before {
+                    top: 0;
+                    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+                    transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+                    transform: translate3d(0, 0, 0) rotate(45deg);
+                }
+        
+                &::after {
+                    top: 0;
+                    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+                    transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+                    transform: translate3d(0, 0, 0) rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    .icon-bar {
+        position: relative;
+        height: 7px;
+        width: 50px;
+        margin: 0.5rem;
+        border-radius: 0.2rem;
+        background: $white;
+        transition: background-color 0s 0.13s linear;
+
+        @media screen and (max-width: $xs) {
+            width: 35px;
+            height: 5px;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 7px;
+            border-radius: 0.2rem;
+            background: $white;
+
+            @media screen and (max-width: $xs) {
+                height: 5px;
+            }
+        }
+
+        &::before {              
+            left: 0;  
+            top: 1.5rem;
+            transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+            transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+            @media screen and (max-width: $xs) {
+                top: 1rem;
+            }
+        }
+    
+        &::after {
+            left: 0;
+            bottom: 1.5rem;
+            transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+            transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+
+            @media screen and (max-width: $xs) {
+                bottom: 1rem;
+            }
+        }
+    }
+}

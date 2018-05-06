@@ -1,7 +1,8 @@
 @import './styles/normalize';
 @import './styles/variables';
+@import './styles/_hamburger';
 @import './styles/fonts';
-
+@import './styles/header';
 
 html {
     font-size: 10px;
@@ -11,13 +12,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;  
+    font-family: $roboto;
+    font-size: 1.6rem; 
 }
 
 .container {
     position: relative;
     margin: 0 auto;
-    max-width: 1050px;
+    max-width: 1460px;
     padding: 2rem 1.5rem;
+    display: flex;
 }
 
 a {

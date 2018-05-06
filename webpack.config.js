@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'prod';
 const assetsPath = path.join(__dirname, '/public');
@@ -88,6 +89,7 @@ const config = {
 if (isProduction) {
     config.plugins.push(new CleanWebpackPlugin(['./public']));
     config.plugins.push(new UglifyJsPlugin());
+    config.plugins.push(new FaviconsWebpackPlugin('./src/img/favicon.png'));
 }
 
 fs.readdirSync(assetsPath)

@@ -1,0 +1,161 @@
+header {
+    width: 100%;
+    background: $primary;
+    color: $white;
+
+    .container {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-family: $lato;
+        font-size: 2.3rem;
+        cursor: pointer;
+
+        &:hover {
+            color: $hover;
+            transition: all .4s;
+        }
+
+        @media screen and (max-width: $sm) {
+            width: auto;
+        }
+
+        @media screen and (max-width: 900px) {
+            max-width: 230px;
+        }
+
+        @media screen and (max-width: $xs) {
+            font-size: 1.6rem;
+            max-width: 200px;
+        }
+
+        @media screen and (max-width: 465px) {
+            font-size: 1.5rem;
+            width: 180px;
+        }
+
+        svg {
+            width: 70px;
+            height: 72px;
+            margin-right: .5rem;
+
+            @media screen and (max-width: 465px) {
+                margin-right: .1rem;
+            }
+        }
+
+        .logo-1,
+        .logo-2 {
+            fill: none;
+            stroke: $white;
+            stroke-miterlimit: 10;
+        }
+
+        .logo-1 {
+            stroke-width: .2rem;
+        }
+        
+        .logo-3 {
+            fill :$white;
+        }
+
+        &:hover .logo-3 {
+            fill: $hover;
+            transition: all .4s;
+        }
+
+        &:hover .logo-1,
+        &:hover .logo-2 {
+            stroke: $secondary;
+            transition: all .4s;
+        }
+    }
+
+    nav {
+        width: 62%;
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: $sm) {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            bottom: -220%;
+            width: 100%;
+            margin: 0 -1.5rem;
+            background: $primary;
+
+            &.active {
+                display: flex;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            font-weight: bold;
+            color: $white;
+
+            &:hover {
+                color: $hover;
+                transition: all .4s;
+
+                @media screen and (max-width: $sm) {
+                    background: $white;
+                }
+            }
+        }
+    }
+
+    .btn-group {
+        display: flex;
+        width: 18%;
+
+        @media screen and (max-width: $sm) {
+            position: relative;
+            left: -7%;
+            width: auto;
+            margin: 0 .5rem;
+        }
+
+        button {
+            padding: 2rem 3rem;
+            border: .3rem solid $white;
+            border-radius: 4rem;
+            font-family: $roboto;
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: transparent;
+            color: $white;
+            cursor: pointer;
+
+            &:hover {
+                border-color: $hover;
+                background: $hover;
+                transition: all .3s;
+            }
+
+            @media screen and (max-width: $xs) {
+                padding: 1.5rem 2rem;
+                border: .2rem solid $white;
+                font-size: 1.6rem;
+            }
+
+            @media screen and (max-width: 465px) {
+                padding: 1rem;
+                font-size: 1.5rem;
+            }
+
+            @media screen and (max-width: 400px) {
+                display: none;
+            }
+        }
+    }
+}
