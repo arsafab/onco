@@ -6,6 +6,10 @@ const toggleNav = () => {
     mainNav.classList.toggle('active');
 };
 
+const hoverBtn = () => {
+    navbarToggle.classList.toggle('hovered');
+};
+
 const closeNav = (event) => {
     let { target } = event;
 
@@ -21,4 +25,6 @@ const closeNav = (event) => {
 };
 
 if (navbarToggle) navbarToggle.addEventListener('click', toggleNav);
+if (navbarToggle) navbarToggle.addEventListener('mouseenter', hoverBtn);
+if (navbarToggle) navbarToggle.addEventListener('mouseleave', hoverBtn);
 if (mainNav) mainNav.addEventListener('click', closeNav);
