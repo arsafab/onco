@@ -5,6 +5,13 @@ header {
     background: $primary;
     color: $white;
 
+    &.sticky {
+        position: sticky;
+        top: 0;
+        left: 0;
+        border-bottom: .2rem solid $white;
+    }
+
     .container {
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -98,6 +105,8 @@ header {
             top: 101px;
             width: 100%;
             margin: 0 -1.5rem;
+            border-top: .1rem solid $white;
+            border-bottom: .1rem solid $white;
             background: $primary;
 
             &.active {
@@ -115,8 +124,18 @@ header {
             &:hover {
                 color: $hover;
                 transition: all .4s;
+            }
 
-                @media screen and (max-width: $sm) {
+            @media screen and (max-width: $sm) {
+                &:first-child {
+                    padding-top: 2rem; 
+                }
+
+                &:last-child {
+                    padding-bottom: 2rem; 
+                }
+                
+                &:hover {
                     background: $white;
                 }
             }

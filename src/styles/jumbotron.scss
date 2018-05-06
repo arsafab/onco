@@ -43,23 +43,30 @@
         input {
             margin-right: 17px;
             height: 57px;
-            min-width: 240px;
+            min-width: 230px;
+            padding: 0 5px;
+            border: 0;
+            border-radius: 1.2rem;
             font-family: $roboto;
             text-align: center;
+
+            &:focus {
+                outline: none;
+            }
         }
 
         input:last-child {
             margin-right: 0;
         }
 
-        input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease;}
-        input::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease;}
-        input:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease;}
-        input:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease;}
-        input:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.3s ease;}
-        input:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.3s ease;}
-        input:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.3s ease;}
-        input:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.3s ease;}
+        input::-webkit-input-placeholder       {text-indent: 0px; opacity: 1; transition: text-indent 0.3s ease;}
+        input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+        input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+        input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+        input:focus::-webkit-input-placeholder {text-indent: 500px; opacity: 0; transition: text-indent 0.3s ease;}
+        input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+        input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+        input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 
         .submit-btn {
             display: flex;
