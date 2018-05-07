@@ -138,6 +138,14 @@
         background: $primary;
         cursor: pointer;
 
+        @media screen and (max-width: 820px) {
+            top: 75px;
+        }
+
+        @media screen and (max-width: 490px) {
+            top: 40px;
+        }
+
         &:hover {
             background: $hover;
             transition: all .4s;
