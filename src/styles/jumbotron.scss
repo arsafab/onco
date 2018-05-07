@@ -125,4 +125,41 @@
             }
         }
     }
+
+    .arrow-down {
+        position: relative;
+        top: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background: $primary;
+        cursor: pointer;
+
+        &:hover {
+            background: $hover;
+            transition: all .4s;
+        }
+
+        svg {
+            height: 30px;
+            width: 30px;
+            fill: none;
+            stroke: $white;
+            stroke-miterlimit: 10;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 86px; 
+            height: 86px;
+            border: .1rem solid $white;
+            border-radius: 50%;
+        }
+    }
 }
