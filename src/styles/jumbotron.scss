@@ -137,6 +137,7 @@
         border-radius: 50%;
         background: $primary;
         cursor: pointer;
+        z-index: 5;
 
         @media screen and (max-width: 820px) {
             top: 75px;
