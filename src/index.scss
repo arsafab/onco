@@ -4,6 +4,7 @@
 @import './styles/header';
 @import './styles/jumbotron';
 @import './styles/advantages';
+@import './styles/to-top';
 
 html {
     font-size: 10px;
@@ -65,4 +66,4 @@ h2 {
         transform: translateX(-50%);
         background: $primary;        
     }
-}
+}    
