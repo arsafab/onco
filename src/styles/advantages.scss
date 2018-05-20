@@ -154,7 +154,7 @@
                 margin-bottom: 1rem;
 
                 span {
-                    margin-bottom: 0;
+                    margin-bottom: .3rem;
                 }
 
                 &:last-child,
@@ -182,8 +182,15 @@
     }
 
     @media screen and (max-width: 500px) {
-        ul li {
-            font-size: 1.6rem;
+        ul {
+            li {
+                font-size: 1.6rem;
+                font-weight: normal;            
+
+                &:first-child {                
+                    font-size: 1.6rem;         
+                }
+            }
         }
     }
 
