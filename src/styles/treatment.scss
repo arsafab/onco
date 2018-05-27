@@ -1,0 +1,44 @@
+.treatment {
+    flex-direction: column;
+
+    h2 {
+        margin-top: 8rem;
+    }
+
+    .treatment-content {
+        display: flex;
+        flex-wrap: wrap;
+
+        figure,
+        figcaption {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        figure {
+            max-width: 380px;
+        }
+
+        svg {
+            width: 60px;
+            height: 65px;
+        }
+
+        .treatment-svg {
+            fill: $primary;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: $black;
+        }
+
+        p {
+            font-weight: 200;
+            font-size: 1.4rem;
+            color: $dark-grey;
+        }
+    }
+}
