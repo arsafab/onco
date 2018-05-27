@@ -5,6 +5,10 @@
 @import './styles/jumbotron';
 @import './styles/advantages';
 @import './styles/to-top';
+@import './styles/treatment';
+@import './styles/programm';
+@import './styles/how-to-visit';
+@import './styles/price-form';
 
 html {
     font-size: 10px;
@@ -43,7 +47,7 @@ h2 {
     position: relative;
     margin-top: 12.5rem;
     margin-bottom: 8.3rem;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 3.6rem;
     text-align: center;
     padding: 0 1.5rem;
@@ -66,4 +70,15 @@ h2 {
         transform: translateX(-50%);
         background: $primary;        
     }
-}    
+} 
+
+h3 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: $black;
+    text-align: center;
+
+    @media screen and (max-width: 400px) {
+        font-size: 1.6rem;
+    }
+}

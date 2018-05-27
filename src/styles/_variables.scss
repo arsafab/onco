@@ -9,6 +9,7 @@ $white: #FFFFFF;
 $black: #191919;
 $hover: #007332;
 $grey: #E2E2E2;
+$dark-grey: #8C8C8C;
 
 // fonts 
 $lato: Lato, Arial, Helvetica, sans-serif;
@@ -44,5 +45,25 @@ $rubik: Rubik, Arial, Helvetica, sans-serif;
     
             $rot: $rot + $angle;
         }
+    }
+}
+
+@mixin button() {
+    padding: 2rem 3rem;
+    border-radius: 4rem;
+    font-family: $roboto;
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+        border-color: $hover;
+        background: $hover;
+        transition: all .3s;
+    }
+
+    @media screen and (max-width: $xs) {
+        padding: 1.5rem 2rem;
+        font-size: 1.6rem;
     }
 }
