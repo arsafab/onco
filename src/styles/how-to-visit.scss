@@ -37,6 +37,11 @@
             &:last-child::after {
                 content: normal;
             }
+
+            &:hover svg {
+                transform: scale(1.1, 1.1);
+                transition: all .2s;
+            }
         }
 
         svg {
