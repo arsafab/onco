@@ -3,25 +3,27 @@
 
     h2 {
         margin-top: 8rem;
+        margin-bottom: 9rem;
     }
 
     .treatment-content {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
 
-        figure,
-        figcaption {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         figure {
-            max-width: 380px;
+            max-width: 280px;
+            min-height: 190px;
+            padding: 5rem 5rem 2rem 5rem;
+            margin: 0 1.4rem 3.4rem 1.4rem;
+            border: 1px solid #a5a4a4;
         }
 
         svg {
-            width: 60px;
+            position: relative;
+            left: 5px;
+            display:block;
+            margin: 0 auto;
             height: 65px;
         }
 
@@ -31,14 +33,19 @@
 
         h3 {
             font-weight: 500;
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             color: $black;
+            text-align: center;
         }
 
         p {
             font-weight: 200;
             font-size: 1.4rem;
             color: $dark-grey;
+            max-height: 47px;
+            overflow-y: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
         }
     }
 }
