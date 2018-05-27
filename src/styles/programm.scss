@@ -1,0 +1,30 @@
+.programm {
+    max-width: 450px;
+    margin: 3rem auto 0 auto;
+    text-align: center;
+
+    p {
+        font-size: 1.6rem;
+        font-weight: 200;
+        margin-bottom: 4rem;
+        padding: 0 1.5rem;
+        color: $dark-grey;
+        
+        @media screen and (max-width: 450px) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    button {
+        @include button();
+        font-weight: 200;
+        border: 2px solid $primary;
+        color: $primary;
+        background: transparent;
+
+        &:hover {
+            color: $white;
+            transition: all .4s;
+        }
+    }
+}

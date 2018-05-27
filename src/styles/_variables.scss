@@ -47,3 +47,23 @@ $rubik: Rubik, Arial, Helvetica, sans-serif;
         }
     }
 }
+
+@mixin button() {
+    padding: 2rem 3rem;
+    border-radius: 4rem;
+    font-family: $roboto;
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+        border-color: $hover;
+        background: $hover;
+        transition: all .3s;
+    }
+
+    @media screen and (max-width: $xs) {
+        padding: 1.5rem 2rem;
+        font-size: 1.6rem;
+    }
+}
