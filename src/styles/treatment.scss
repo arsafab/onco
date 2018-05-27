@@ -34,8 +34,19 @@
             }
 
             &:hover {
+                border: 1px solid $black;
+                transition: all .2s;
+            }
+
+            &:hover svg {
                 transform: scale(1.1, 1.1);
                 transition: all .2s;
+            }
+            
+            &:hover::after {
+                transition: all .2s;
+                width: 52px;
+                height: 60px;
             }
 
             &:after {
