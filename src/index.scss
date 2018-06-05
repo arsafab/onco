@@ -10,6 +10,7 @@
 @import './styles/how-to-visit';
 @import './styles/price-form';
 @import './styles/clinics';
+@import './styles/feedback';
 
 html {
     font-size: 10px;
@@ -82,4 +83,9 @@ h3 {
     @media screen and (max-width: 400px) {
         font-size: 1.6rem;
     }
+}
+
+p {
+    font-weight: 200;
+    color: $dark-grey;
 }

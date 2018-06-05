@@ -5,10 +5,8 @@
 
     p {
         font-size: 1.6rem;
-        font-weight: 200;
         margin-bottom: 4rem;
         padding: 0 1.5rem;
-        color: $dark-grey;
         
         @media screen and (max-width: 450px) {
             margin-bottom: 2rem;
