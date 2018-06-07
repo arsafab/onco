@@ -1,0 +1,91 @@
+.feedback-block {
+    .feedback-content {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p {
+        max-width: 770px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 2.2rem;
+        line-height: 1;
+
+        @media screen and (max-width: 910px) {
+            padding: 0 55px;
+            font-size: 1.8rem;
+        }
+
+        @media screen and (max-width: 910px) {
+            font-size: 1.6rem;
+        }
+    }
+
+    figure {
+        margin-top: 5rem;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 160px;
+        border-radius: 50%;
+    }
+
+    figcaption {
+        margin-top: 2rem; 
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 200;
+        color: $dark-grey;
+    }
+
+    .arrow-left,
+    .arrow-right {
+        position: absolute;
+        top: 27%;
+        width: 45px;
+        height: 45px;
+        border: 1px solid $primary;
+        border-radius: 50%;
+        background: transparent;
+        cursor: pointer;
+
+        &:hover {
+            background: $primary;
+            transition: all .4s;
+        }
+
+        &:hover .feedback-arrow {
+            stroke: $white;
+            transition: all .4s;
+        }
+    }
+
+    .arrow-left {
+        left: 18%;
+
+        @media screen and (max-width: 1400px) {
+            left: 15px;
+        }
+    }
+
+    .arrow-right {
+        right: 18%;
+
+        @media screen and (max-width: 1400px) {
+            right: 15px;
+        }
+    }
+
+    svg {
+        width: 15px;
+    }
+
+    .feedback-arrow {
+        fill: none;
+        stroke: $primary;
+        stroke-miterlimit: 10;
+    }
+}

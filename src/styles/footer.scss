@@ -1,0 +1,126 @@
+footer {
+    width: 770px;
+    margin: 9rem auto;
+    padding: 0 1.5rem;
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 500px) {
+        margin: 5rem auto 0 auto;
+    }
+
+
+    form {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+        }
+
+        input {
+            width: 360px;
+            min-height: 57px;
+            border: 1px solid $dark-grey;
+            background: transparent;
+            color: $dark-grey;
+
+            @media screen and (max-width: 800px) {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        input:first-child {
+            width: 165px;
+
+            @media screen and (max-width: 800px) {
+                width: 100%;
+            }
+        }
+
+        button {
+            @include button();
+            font-family: $rubik;
+            font-weight: 200;
+            border: 2px solid $primary;
+            color: $primary;
+            background: transparent;
+
+            @media screen and (max-width: 800px) {
+                margin: 0 auto;
+                width: 160px;
+            }
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    .contacts-block {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5.5rem;
+
+        @media screen and (max-width: 570px) {
+            flex-direction: column;
+        }
+
+        h4 {
+            position: relative;
+            text-align: center;
+            font-weight: 200;
+            font-size: 2.2rem;
+            color: $black;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -18px;
+                left: 50%;
+                width: 30px;
+                height: 2px;
+                transform: translateX(-50%);
+                background: $primary;        
+            }
+        }
+
+        ul {
+            margin-top: 5rem;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5rem;
+            text-align: center;
+
+            a {
+                display: block;
+                margin-bottom: 2rem;
+                color: $dark-grey;
+            }
+        }
+
+        li {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            font-weight: 200;
+            color: $primary;
+
+            &:hover {
+                color: $black;
+                transition: all .4s;
+            }
+        }
+    }
+}
