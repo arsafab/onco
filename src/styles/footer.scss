@@ -1,0 +1,63 @@
+footer {
+    width: 770px;
+    margin: 9rem auto 0 auto;
+    padding: 0 1.5rem;
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 500px) {
+        margin: 5rem auto 0 auto;
+    }
+
+
+    form {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+        }
+
+        input {
+            width: 360px;
+            min-height: 57px;
+            border: 1px solid $dark-grey;
+            background: transparent;
+            color: $dark-grey;
+
+            @media screen and (max-width: 800px) {
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        input:first-child {
+            width: 165px;
+
+            @media screen and (max-width: 800px) {
+                width: 100%;
+            }
+        }
+
+        button {
+            @include button();
+            font-family: $rubik;
+            font-weight: 200;
+            border: 2px solid $primary;
+            color: $primary;
+            background: transparent;
+
+            @media screen and (max-width: 800px) {
+                margin: 0 auto;
+                width: 160px;
+            }
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
