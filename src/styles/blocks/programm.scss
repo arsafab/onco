@@ -1,4 +1,4 @@
-.programm {
+.programm-block {
     max-width: 450px;
     margin: 3rem auto 0 auto;
     text-align: center;
@@ -14,11 +14,8 @@
     }
 
     button {
-        @include button();
+        @include button($primary);
         font-weight: 200;
-        border: 2px solid $primary;
-        color: $primary;
-        background: transparent;
 
         &:hover {
             color: $white;

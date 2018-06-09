@@ -29,7 +29,7 @@
             max-width: 370px;
             box-sizing: border-box;
             margin: 0 1.4rem 3.4rem 1.4rem;
-            border: 1px solid $grey;
+            border: .1rem solid $grey;
 
             @media screen and (max-width: 1225px) {
                 padding: 3rem 1.5rem;
@@ -65,14 +65,11 @@
 
     button,
     .show-more {
-        @include button();
+        @include button($primary);
         margin: 2.3rem auto 0 auto;
         padding: 1.5rem 1.9rem;
         font-weight: 200;
         max-width: 170px;
-        border: 1px solid $primary;
-        color: $primary;
-        background: transparent;
 
         &:hover {
             color: $white;
@@ -95,7 +92,6 @@
         display: flex;
         justify-content: center;
         margin-top: 2rem;
-
         
         @media screen and (max-width: 1170px) {
             display: none;
@@ -105,7 +101,7 @@
             height: 18px;
             width: 18px;
             margin-right: 0.8rem;
-            border: 2px solid $grey;
+            border: .2rem solid $grey;
             border-radius: 50%; 
             cursor: pointer;
 

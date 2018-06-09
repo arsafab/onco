@@ -11,14 +11,9 @@
         flex-wrap: wrap;
         padding: 0 6rem;
 
-        @media screen and (max-width: 1300px) {
-            padding: 0 1.5rem;
-        }
-
         figure {
             position: relative;
             max-width: 300px;
-            cursor: pointer;
 
             &:last-child svg {
                 left: -5px;
@@ -72,13 +67,10 @@
     }
 
     button {
-        @include button();
+        @include button($primary);
         margin: 6.5rem auto 0 auto;
         padding: 2rem 4rem;
         font-weight: 200;
-        border: 2px solid $primary;
-        color: $primary;
-        background: transparent;
 
         &:hover {
             color: $white;

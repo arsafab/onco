@@ -1,20 +1,4 @@
-@import './styles/font-awesome';
-@import './styles/normalize';
-@import './styles/variables';
-@import './styles/fonts';
-@import './styles/header';
-@import './styles/jumbotron';
-@import './styles/advantages';
-@import './styles/to-top';
-@import './styles/treatment';
-@import './styles/programm';
-@import './styles/how-to-visit';
-@import './styles/price-form';
-@import './styles/clinics';
-@import './styles/feedback';
-@import './styles/info';
-@import './styles/icons';
-@import './styles/footer';
+@import './styles/index';
 
 html {
     font-size: 10px;
@@ -57,6 +41,10 @@ h2 {
     font-size: 3.6rem;
     text-align: center;
     padding: 0 1.5rem;
+
+    @media screen and (max-width: 1300px) {
+        padding: 0 1.5rem;
+    }
 
     @media screen and (max-width: 940px) {
         margin-top: 6rem;
@@ -112,3 +100,7 @@ input:focus::-webkit-input-placeholder {text-indent: 500px; opacity: 0; transiti
 input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
 input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
 input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+ul {
+    list-style: none;
+}

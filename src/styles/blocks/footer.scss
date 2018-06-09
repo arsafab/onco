@@ -43,12 +43,9 @@ footer {
         }
 
         button {
-            @include button();
+            @include button($primary);
             font-family: $rubik;
             font-weight: 200;
-            border: 2px solid $primary;
-            color: $primary;
-            background: transparent;
 
             @media screen and (max-width: 800px) {
                 margin: 0 auto;
@@ -68,6 +65,7 @@ footer {
 
         @media screen and (max-width: 570px) {
             flex-direction: column;
+            margin-bottom: 5.5rem;
         }
 
         h4 {
@@ -92,7 +90,6 @@ footer {
         ul {
             margin-top: 5rem;
             padding: 0;
-            list-style: none;
             text-align: center;
         }
 
@@ -116,6 +113,10 @@ footer {
         a {
             font-weight: 200;
             color: $primary;
+
+            @media screen and (max-width: 570px) {
+                font-weight: 400;
+            }
 
             &:hover {
                 color: $black;

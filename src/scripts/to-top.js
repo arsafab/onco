@@ -1,10 +1,12 @@
 import scrollTo from './utils/scrollTo';
 
 const arrowDown = document.querySelector('#to-top');
+const logo = document.querySelector('.logo');
 const runScroll = () => scrollTo(document.documentElement, 0, 200);
 
 const onscroll = () => {
     const height = document.documentElement.scrollTop;
+    logo.addEventListener('click', runScroll);
 
     if (height > 300) {
         arrowDown.addEventListener('click', runScroll);
