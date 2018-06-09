@@ -1,3 +1,5 @@
+import { removeHover, addHover } from './utils/hover'
+
 const navbarToggle = document.querySelector('#navbar-toggle');
 const mainNav = document.querySelector('#main-nav');
 
@@ -9,14 +11,6 @@ const toggleNav = () => {
         && navbarToggle.classList.contains('active')) {
             navbarToggle.classList.remove('hovered');
         }
-};
-
-const addHover = () => {
-    navbarToggle.classList.add('hovered');
-};
-
-const removeHover = () => {
-    navbarToggle.classList.remove('hovered');
 };
 
 const closeNav = (event) => {
@@ -34,6 +28,6 @@ const closeNav = (event) => {
 };
 
 if (navbarToggle) navbarToggle.addEventListener('click', toggleNav);
-if (navbarToggle) navbarToggle.addEventListener('mouseenter', addHover);
-if (navbarToggle) navbarToggle.addEventListener('mouseleave', removeHover);
+if (navbarToggle) navbarToggle.addEventListener('mouseenter', addHover(navbarToggle));
+if (navbarToggle) navbarToggle.addEventListener('mouseleave', removeHover(navbarToggle));
 if (mainNav) mainNav.addEventListener('click', closeNav);
