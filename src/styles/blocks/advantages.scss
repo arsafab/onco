@@ -35,15 +35,9 @@
             font-size: 1.4rem;
             font-weight: 200;
             text-align: center;
-            cursor: pointer;
 
             @media screen and (max-width: 1000px) {
                 max-width: 300px;
-            }
-
-            &:hover {
-                transform: scale(1.1, 1.1);
-                transition: all .4s;
             }
 
             span {
