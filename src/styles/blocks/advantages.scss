@@ -1,4 +1,4 @@
-.advantages {
+.advantages-block {
 
     .advantages-content {
         position: relative;
@@ -111,7 +111,7 @@
         }
     }
 
-    .border {
+    .advantages-border {
         @include on-circle($item-count: 36, $circle-size: 480px, $item-size: .8rem);
 
         @media screen and (max-width: 1130px) {
@@ -176,7 +176,7 @@
             }
         }
 
-        .border {
+        .advantages-border  {
             display: none;
         }
     }
