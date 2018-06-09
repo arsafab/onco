@@ -44,7 +44,7 @@
         transition: all .3s;
     }
 
-    @media screen and (max-width: $xs) {
+    @media screen and (max-width: 550px) {
         padding: 1.5rem 2rem;
         font-size: 1.6rem;
     }

@@ -29,7 +29,7 @@
         background: $hover;
         color: $white;
 
-        @media screen and (max-width: $xs) {
+        @media screen and (max-width: 550px) {
             padding: 1.5rem 4rem;
             font-size: 1.6rem;
         }

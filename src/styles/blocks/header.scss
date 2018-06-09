@@ -19,7 +19,7 @@ header {
         align-items: center;
         justify-content: space-between;
 
-        @media screen and (max-width: $sm) {
+        @media screen and (max-width: 1395px) {
             padding-top: 0;
             padding-bottom: 0;
         }
@@ -39,7 +39,7 @@ header {
             transition: all .4s;
         }
 
-        @media screen and (max-width: $sm) {
+        @media screen and (max-width: 1395px) {
             width: auto;
         }
 
@@ -47,7 +47,7 @@ header {
             max-width: 230px;
         }
 
-        @media screen and (max-width: $xs) {
+        @media screen and (max-width: 550px) {
             font-size: 1.6rem;
             max-width: 200px;
         }
@@ -99,7 +99,7 @@ header {
         display: flex;
         justify-content: space-between;
 
-        @media screen and (max-width: $sm) {
+        @media screen and (max-width: 1395px) {
             display: none;
             flex-direction: column;
             position: absolute;
@@ -127,7 +127,7 @@ header {
                 transition: all .4s;
             }
 
-            @media screen and (max-width: $sm) {
+            @media screen and (max-width: 1395px) {
                 &:first-child {
                     padding-top: 2rem; 
                 }
@@ -147,11 +147,11 @@ header {
         display: flex;
         width: 18%;
 
-        @media screen and (min-width: $sm) {
+        @media screen and (min-width: 1395px) {
             justify-content: flex-end;
         }
 
-        @media screen and (max-width: $sm) {
+        @media screen and (max-width: 1395px) {
             position: relative;
             left: -7%;
             width: auto;
@@ -168,7 +168,7 @@ header {
                 display: none;
             }
 
-            @media screen and (max-width: $xs) {
+            @media screen and (max-width: 550px) {
                 border: .2rem solid $white;
             }
 
