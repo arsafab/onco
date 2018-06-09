@@ -1,4 +1,4 @@
-import { removeHover, addHover } from './utils/hover'
+import { removeHover, addHover } from './utils/hover';
 
 const navbarToggle = document.querySelector('#navbar-toggle');
 const mainNav = document.querySelector('#main-nav');

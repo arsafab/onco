@@ -1,5 +1,6 @@
 import { addHover, removeHover } from './utils/hover';
 
+// hover figure border in treatment block
 const treatmentContent = document.querySelector('.treatment-content');
 
 const catchHoverEvent = (event) => {
