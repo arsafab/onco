@@ -13,6 +13,11 @@
     cursor: pointer;
     z-index: 15;
 
+    @media screen and (max-width: 400px) {
+        height: 80px;
+        width: 80px;
+    }
+
     &:hover {
         background: $hover;
         transition: all .4s;
@@ -35,6 +40,11 @@
         height: 86px;
         border: .1rem solid $white;
         border-radius: 50%;
+
+        @media screen and (max-width: 400px) {
+            width: 66px; 
+            height: 66px;
+        }
     }
 }
 

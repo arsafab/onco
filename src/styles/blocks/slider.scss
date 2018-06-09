@@ -29,7 +29,7 @@
             max-width: 370px;
             box-sizing: border-box;
             margin: 0 1.4rem 3.4rem 1.4rem;
-            border: 1px solid $grey;
+            border: .1rem solid $grey;
 
             @media screen and (max-width: 1225px) {
                 padding: 3rem 1.5rem;
@@ -101,7 +101,7 @@
             height: 18px;
             width: 18px;
             margin-right: 0.8rem;
-            border: 2px solid $grey;
+            border: .2rem solid $grey;
             border-radius: 50%; 
             cursor: pointer;
 

@@ -26,14 +26,14 @@
             min-height: 190px;
             padding: 5rem 5rem 2rem 5rem;
             margin: 0 1.4rem 3.4rem 1.4rem;
-            border: 1px solid $grey;
+            border: .1rem solid $grey;
 
             @media screen and (max-width: 500px) {
                 padding: 3rem 2rem 2rem 2rem;
             }
 
             &.hovered {
-                border: 1px solid $black;
+                border: .1rem solid $black;
                 transition: all .2s;
             }
 
@@ -77,8 +77,8 @@
         }
 
         .treatment-svg2 {
-            fill:#fff;
-            stroke:#00be54;
+            fill: $white;
+            stroke: $primary;
             stroke-miterlimit:10;
         }
 

@@ -32,7 +32,7 @@
 
 @mixin button($border-color, $font-color: $primary) {
     padding: 2rem 3rem;
-    border: 2px solid $border-color;
+    border: .2rem solid $border-color;
     border-radius: 4rem;
     font-family: $roboto;
     font-size: 1.8rem;
