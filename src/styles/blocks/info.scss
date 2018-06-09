@@ -20,7 +20,7 @@
     }
 
     button {
-        @include button();
+        @include button(transparent, $white);
         margin-top: -10px;
         padding: 2rem 7rem;
         border: none;

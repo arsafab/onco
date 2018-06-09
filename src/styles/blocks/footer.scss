@@ -43,12 +43,9 @@ footer {
         }
 
         button {
-            @include button();
+            @include button($primary);
             font-family: $rubik;
             font-weight: 200;
-            border: 2px solid $primary;
-            color: $primary;
-            background: transparent;
 
             @media screen and (max-width: 800px) {
                 margin: 0 auto;

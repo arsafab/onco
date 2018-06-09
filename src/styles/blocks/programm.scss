@@ -14,11 +14,8 @@
     }
 
     button {
-        @include button();
+        @include button($primary);
         font-weight: 200;
-        border: 2px solid $primary;
-        color: $primary;
-        background: transparent;
 
         &:hover {
             color: $white;

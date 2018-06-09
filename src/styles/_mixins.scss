@@ -30,12 +30,14 @@
     }
 }
 
-@mixin button() {
+@mixin button($border-color, $font-color: $primary) {
     padding: 2rem 3rem;
+    border: 2px solid $border-color;
     border-radius: 4rem;
     font-family: $roboto;
     font-size: 1.8rem;
-    font-weight: 700;
+    background: transparent;
+    color: $font-color;
     cursor: pointer;
 
     &:hover {
@@ -47,5 +49,6 @@
     @media screen and (max-width: 550px) {
         padding: 1.5rem 2rem;
         font-size: 1.6rem;
+        font-weight: 400;
     }
 }

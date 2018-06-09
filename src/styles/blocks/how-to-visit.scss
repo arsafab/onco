@@ -72,13 +72,10 @@
     }
 
     button {
-        @include button();
+        @include button($primary);
         margin: 6.5rem auto 0 auto;
         padding: 2rem 4rem;
         font-weight: 200;
-        border: 2px solid $primary;
-        color: $primary;
-        background: transparent;
 
         &:hover {
             color: $white;
