@@ -47,6 +47,10 @@
             position: relative;
             opacity: 1;
             transition: opacity 1s ease-in-out;
+
+            button {
+                z-index: 1000;
+            }
         }
 
         figcaption {
