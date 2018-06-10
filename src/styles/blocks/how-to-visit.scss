@@ -78,7 +78,7 @@
         }
     }
 
-    // STYLES FOR SCREENS LESS THAN 120PX
+    // STYLES FOR SCREENS LESS THAN 1200PX
     @media screen and (max-width: 1200px) {
         h2 {
             margin-top: 5rem;
@@ -110,6 +110,10 @@
     }
 
     @media screen and (max-width: 500px) {
+        h2 {
+            margin-top: 8rem;
+        }
+
         button {
             margin: 2rem auto 0 auto;
         }
