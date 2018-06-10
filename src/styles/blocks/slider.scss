@@ -23,6 +23,7 @@
 
         figure {
             display: flex;
+            position: absolute;
             flex-direction: column;
             align-items: center;
             padding: 3rem;
@@ -30,6 +31,7 @@
             box-sizing: border-box;
             margin: 0 1.4rem 3.4rem 1.4rem;
             border: .1rem solid $grey;
+            opacity: 0;
 
             @media screen and (max-width: 1225px) {
                 padding: 3rem 1.5rem;
@@ -39,6 +41,12 @@
             @media screen and (max-width: 420px) {
                 max-width: auto;
             }
+        }
+
+        figure.active {
+            position: relative;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
         }
 
         figcaption {
@@ -95,6 +103,11 @@
         
         @media screen and (max-width: 1170px) {
             display: none;
+        }
+
+        .active {
+            border-color: $primary;
+            background: $primary;
         }
 
         span {
