@@ -4,10 +4,8 @@ const indicators = document.querySelectorAll('.indicators');
 
 const showNextItems = (slider) => {
     const sliderItems = slider.querySelectorAll('.slider-content figure');
-    const activeIndicatorIndex =
-        [...slider.querySelectorAll('span')]
-        .findIndex(span => span.classList.contains('active'))
-        + 1; // add 1 to get ability of multiply
+    const activeIndicatorIndex = [...slider.querySelectorAll('span')]
+            .findIndex(span => span.classList.contains('active')) + 1; // add 1 to get ability of multiply
 
     sliderItems.forEach((item) => {
         if (item.classList.contains('active')) {
