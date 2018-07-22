@@ -1,5 +1,6 @@
 .slider-block {
     .slider-content {
+        position: relative;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
@@ -45,12 +46,22 @@
 
         figure.active {
             position: relative;
+            left: 0;
+            right: 0;
             opacity: 1;
-            transition: opacity 1s ease-in-out;
+            transition: all .4s ease-in-out;
 
             button {
                 z-index: 1000;
             }
+        }
+
+        figure.right {
+            left: 100%;
+        }
+
+        figure.left {
+            left: -100%;
         }
 
         figcaption {
