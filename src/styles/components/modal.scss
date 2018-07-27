@@ -54,12 +54,12 @@
 
 .modal.show {
     opacity: 1;
-    transition: all .4s;
+    transition: opacity .4s;
     z-index: 1100;
 }
 
 .modal.hide {
     opacity: 0;
-    transition: all .4s;
+    transition: opacity .4s;
     z-index: -100;
 }
