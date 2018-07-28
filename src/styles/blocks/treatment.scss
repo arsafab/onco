@@ -82,11 +82,13 @@
             stroke-miterlimit:10;
         }
 
+        figcaption {
+            height: 106px;
+            overflow: hidden;
+        }
+
         p {
             font-size: 1.4rem;
-            max-height: 47px;
-            overflow-y: hidden;
-            text-overflow: ellipsis;
             text-align: center;
         }
     }
