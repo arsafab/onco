@@ -52,28 +52,28 @@
             }
 
             &:first-child::after {
-                right: 43px;
+                right: 41px;
             }
 
             &:nth-child(2)::after {
                 bottom: 37px;
-                right: 53px;
+                right: 51px;
             }
 
             &:nth-child(3)::after {                
-                right: 69px;
+                right: 67px;
             }
 
             &:nth-child(4)::after {
-                right: 41px;
+                right: 39px;
             }
 
             &:nth-child(5)::after {
-                right: 49px;
+                right: 47px;
             }
 
             &:last-child::after {
-                right: 36px;
+                right: 45px;
             }
 
             @media screen and (max-width: 500px) {
@@ -157,6 +157,11 @@
         p {
             font-size: 1.4rem;
             text-align: center;
+
+            b, em, strong {
+                font-weight: 200;
+                font-style: normal;
+            }
         }
     }
 }

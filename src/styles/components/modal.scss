@@ -9,7 +9,7 @@
 
     .wrapper {
         position: fixed;
-        top: 30%;
+        top: 40%;
         left: 50%;
         width: 40%;
         transform: translate(-50%, -50%);
@@ -49,6 +49,10 @@
             color: $primary;
             border-color: $primary;
         }
+    }
+
+    p {
+        line-height: 2.5rem;
     }
 }
 
