@@ -1,14 +1,14 @@
 const formTriggers = document.querySelectorAll('.modal-form-trigger');
 const modalForm = document.querySelector('.modal-form');
 const closeBtn = document.querySelector('.close-modal');
-const crosshair = document.querySelector('.crosshair');
+const modalFormCrosshair = document.querySelector('.modal-form .crosshair');
 
-const openModal = () => {
+const openModalForm = () => {
     modalForm.classList.remove('hide');
     modalForm.classList.add('show');
 };
 
-const closeModal = () => {
+const closeModalForm = () => {
     modalForm.classList.remove('show');
     modalForm.classList.add('hide');
 };
@@ -20,7 +20,7 @@ const backdropFormClick = (event) => {
     }
 };
 
-formTriggers.forEach(trigger => trigger.addEventListener('click', openModal));
-closeBtn.addEventListener('click', closeModal);
+formTriggers.forEach(trigger => trigger.addEventListener('click', openModalForm));
+closeBtn.addEventListener('click', closeModalForm);
 modalForm.addEventListener('click', backdropFormClick);
-crosshair.addEventListener('click', closeModal);
+modalFormCrosshair.addEventListener('click', closeModalForm);

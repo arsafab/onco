@@ -1,6 +1,7 @@
 const triggers = document.querySelectorAll('.modal-trigger');
 const modal = document.querySelector('.modal');
 const closeBtn = document.querySelector('.close-modal');
+const modalCrosshair = document.querySelector('.modal .crosshair');
 
 const modalBody = modal.firstElementChild.firstElementChild;
 
@@ -43,3 +44,4 @@ const backdropClick = (event) => {
 triggers.forEach(trigger => trigger.addEventListener('click', openModal));
 closeBtn.addEventListener('click', closeModal);
 modal.addEventListener('click', backdropClick);
+modalCrosshair.addEventListener('click', closeModal);
