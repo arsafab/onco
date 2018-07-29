@@ -3,6 +3,7 @@
         position: relative;
         flex-direction: column;
         align-items: center;
+        overflow: hidden;
     }
 
     p {
@@ -75,6 +76,20 @@
         }
     }
 
+    .arrow-left[disabled],
+    .arrow-right[disabled] {
+        border: 1px solid $secondary;
+        cursor: default;
+
+        .feedback-arrow {
+            stroke: $secondary;
+        }
+
+        &:hover {
+            background: none;
+        }
+    }
+
     .arrow-left {
         left: 18%;
 
@@ -102,5 +117,30 @@
         fill: none;
         stroke: $primary;
         stroke-miterlimit: 10;
+    }
+
+    .feedback-item {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .feedback-item.active {
+        position: relative;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        transition: all .8s ease-in-out;
+
+        button {
+            z-index: 1000;
+        }
+    }
+
+    .feedback-item.right {
+        left: 100%;
+    }
+
+    .feedback-item.left {
+        left: -100%;
     }
 }

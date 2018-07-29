@@ -6,3 +6,4 @@ import './hover-figure-border'; // hover figure border in treatment block
 import './slider';
 import './move-to-ancors';
 import './modal';
+import './feedback-slider';
