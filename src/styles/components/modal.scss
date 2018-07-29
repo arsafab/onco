@@ -50,17 +50,6 @@
         }
     }
 
-    button.action {
-        background: $primary;
-        color: $white;
-
-        &:hover {
-            background: $white;
-            color: $primary;
-            border-color: $primary;
-        }
-    }
-
     p {
         line-height: 2.5rem;
     }
