@@ -7,3 +7,4 @@ import './slider';
 import './move-to-ancors';
 import './modal';
 import './feedback-slider';
+import './modal-form';
