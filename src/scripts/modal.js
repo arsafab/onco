@@ -2,9 +2,30 @@ const triggers = document.querySelectorAll('.modal-trigger');
 const modal = document.querySelector('.modal');
 const closeBtn = document.querySelector('.close-modal');
 
-const openModal = () => {
+const modalBody = modal.firstElementChild.firstElementChild;
+
+const openModal = (event) => {
+    let { target } = event;
+
     modal.classList.remove('hide');
     modal.classList.add('show');
+    modalBody.innerHTML = '';
+
+    while (target.tagName !== 'SECTION') {
+        if (target.tagName === 'FIGURE') {
+            const content = [...target.children].find(item => item.tagName === 'FIGCAPTION');
+
+            [...content.children].forEach((item) => {
+                if (item.tagName !== 'BUTTON') {
+                    modalBody.appendChild(item.cloneNode(true));
+                }
+            });
+
+            return;
+        }
+
+        target = target.parentNode;
+    }
 };
 
 const closeModal = () => {
