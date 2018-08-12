@@ -73,6 +73,11 @@ const config = {
             template: path.resolve(__dirname, './src/index.html'),
             inject: 'body',
         }),
+        new HtmlWebpackPlugin({
+            filename: './404.html',
+            template: path.resolve(__dirname, './src/404.html'),
+            inject: 'body',
+        }),
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'async',
         }),
