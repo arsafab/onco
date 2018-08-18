@@ -19,7 +19,11 @@
                 "peerDependencies": false
             }
         ],
-        "linebreak-style": 0
+        "linebreak-style": 0,
+        "no-unused-expressions": [
+            "error",
+            { "allowTernary": true }
+        ]
     },
 
     "extends": "airbnb"
