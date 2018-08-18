@@ -11,6 +11,12 @@ const openConfirmation = () => {
 const closeConfirmation = () => {
     confirmation.classList.remove('show');
     confirmation.classList.add('hide');
+
+    [...document.querySelectorAll('input')].forEach((input) => {
+        if (input.value) {
+            input.value = ''; // eslint-disable-line no-param-reassign
+        }
+    });
 };
 
 const backdropConfirmationClick = (event) => {
