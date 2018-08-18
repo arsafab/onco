@@ -16,6 +16,12 @@ const openModal = (event) => {
         if (target.tagName === 'FIGURE') {
             const content = [...target.children].find(item => item.tagName === 'FIGCAPTION');
 
+            const svg = [...target.children].find(item => item.tagName === 'svg' && !item.classList.contains('arrow-down'));
+            const image = [...target.children].find(item => item.tagName === 'IMG' && !item.classList.contains('arrow-down'));
+
+            if (svg) modalBody.appendChild(svg.cloneNode(true));
+            if (image) modalBody.appendChild(image.cloneNode(true));
+
             [...content.children].forEach((item) => {
                 if (item.tagName !== 'BUTTON') {
                     modalBody.appendChild(item.cloneNode(true));
