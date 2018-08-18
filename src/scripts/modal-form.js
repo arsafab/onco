@@ -52,3 +52,4 @@ closeBtn.addEventListener('click', closeModalForm);
 modalForm.addEventListener('click', backdropFormClick);
 modalFormCrosshair.addEventListener('click', closeModalForm);
 [...modalFormInputs].forEach(input => input.addEventListener('keyup', validateForm));
+modalFormSubmitBtn.addEventListener('click', closeModalForm);
