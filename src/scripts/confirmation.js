@@ -1,6 +1,7 @@
 const confirmation = document.querySelector('.confirmation');
 const closeConfirmationBtn = document.querySelector('.close-confirmation');
 const confirmationCrosshair = document.querySelector('.confirmation .crosshair');
+const submitButtons = document.querySelectorAll('button[type=submit]');
 
 const openConfirmation = () => {
     confirmation.classList.remove('hide');
@@ -22,3 +23,5 @@ const backdropConfirmationClick = (event) => {
 confirmation.addEventListener('click', backdropConfirmationClick);
 closeConfirmationBtn.addEventListener('click', closeConfirmation);
 confirmationCrosshair.addEventListener('click', closeConfirmation);
+
+[...submitButtons].forEach(btn => btn.addEventListener('click', openConfirmation));
