@@ -84,19 +84,6 @@
             color: $white;
         }
     }
-
-    button[disabled] {
-        cursor: default;
-        background: $white;
-        color: $secondary;
-        border-color: $secondary;
-
-        &:hover {
-            background: $white;
-            color: $secondary;
-            border-color: $secondary;
-        }
-    }
 }
 
 .modal-form.show {

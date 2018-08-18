@@ -10,3 +10,4 @@ import './feedback-slider';
 import './modal-form';
 import './sharing-icons';
 import './confirmation';
+import './forms';

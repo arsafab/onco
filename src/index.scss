@@ -28,6 +28,19 @@ button {
     outline: none;
 }
 
+button[disabled] {
+    cursor: default;
+    background: $white;
+    color: $secondary;
+    border-color: $secondary;
+
+    &:hover {
+        background: $white;
+        color: $secondary;
+        border-color: $secondary;
+    }
+}
+
 img {
     max-width: 100%;
     height: auto;

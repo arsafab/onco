@@ -17,6 +17,12 @@ const closeConfirmation = () => {
             input.value = ''; // eslint-disable-line no-param-reassign
         }
     });
+
+    [...submitButtons].forEach((btn) => {
+        if (!btn.disabled) {
+            btn.disabled = true; // eslint-disable-line no-param-reassign
+        }
+    });
 };
 
 const backdropConfirmationClick = (event) => {
