@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Лечение онкологии в Израиле</title>
 
-    <script type="text/javascript">let submitted=false;</script>
+    <script type="text/javascript">
+        let submitted=false;
+    </script>
 </head>
 <body>
     <header id="header">
@@ -41,15 +43,21 @@
         <section class="jumbotron-block">
             <h1>Лечение рака в Израиле</h1>
             <p>Достижение максимально положительного эффекта при лечении любых форм рака</p>
-            <form action="">
+            <form
+                name="jumbo-form"
+                enctype="text/plain"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSc1dtpluesEMzPGqbWGey6Fk5wcFeW1VYjvWo7cWuhOidHrcg/formResponse?"
+                target="hidden_iframe"
+                onsubmit="submitted=true;"
+            >
                 <div>
-                    <input type="text" placeholder="Имя">
-                    <input type="tel" placeholder="Телефон с кодом">
-                    <input type="text" placeholder="Заболевание">
+                    <input type="text" placeholder="Имя" name="entry.1041503774">
+                    <input type="tel" placeholder="Телефон с кодом" name="entry.1570923067">
+                    <input type="text" placeholder="Заболевание" name="entry.140618705">
                 </div>
 
                 <div class="submit-btn">
-                    <button>Хочу лечиться</button>
+                    <button type="submit">Хочу лечиться</button>
                 </div>
             </form>
 
@@ -234,15 +242,21 @@
             <div class="container">
                 <h2>Стоимость лечения</h2>
                 <p>Стоимость рассчитывается для каждого пациента индивидуально, т.к. израильские врачи уже перед поездкой рассматривают Ваш историю болезни и заранее могут сказать, какие процедуры Вам необходимо пройти.</p>
-                <form action="">
+                <form
+                    name="price-form"
+                    enctype="text/plain"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSc1dtpluesEMzPGqbWGey6Fk5wcFeW1VYjvWo7cWuhOidHrcg/formResponse?"
+                    target="hidden_iframe"
+                    onsubmit="submitted=true;"
+                >
                     <div>
-                        <input type="text" placeholder="Имя">
-                        <input type="tel" placeholder="Телефон с кодом">
-                        <input type="text" placeholder="Заболевание">
+                        <input type="text" placeholder="Имя" name="entry.1041503774">
+                        <input type="tel" placeholder="Телефон с кодом" name="entry.1570923067">
+                        <input type="text" placeholder="Заболевание" name="entry.140618705">
                     </div>
 
                     <div class="submit-btn">
-                        <button>Узнать цену</button>
+                        <button type="submit">Узнать цену</button>
                     </div>
                 </form>
             </div>
@@ -439,9 +453,15 @@
     </main>
 
     <footer id="contacts">
-        <form action="">
-            <input type="email" placeholder="Email:">
-            <input type="text" placeholder="Ваше сообщение:">
+        <form
+            name="contacts-form"
+            enctype="text/plain"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSc1dtpluesEMzPGqbWGey6Fk5wcFeW1VYjvWo7cWuhOidHrcg/formResponse?"
+            target="hidden_iframe"
+            onsubmit="submitted=true;"
+        >
+            <input type="text" placeholder="Email:" name="entry.1041503774">
+            <input type="text" placeholder="Ваше сообщение:" name="entry.140618705">
             <button type="submit">Отправить</button>
         </form>  
         
@@ -498,17 +518,16 @@
             <h3>Оставьте свои контактные данные и кратко опишите проблему. Наш специалист перезвонит Вам в течение дня и проконсультирует по вопросам лечения в Израиле. Звонок для Вас бесплатный!</h3>
 
             <form 
-                name="form"
-                id="form"
+                name="modal-form"
                 enctype="text/plain"
                 action="https://docs.google.com/forms/d/e/1FAIpQLSc1dtpluesEMzPGqbWGey6Fk5wcFeW1VYjvWo7cWuhOidHrcg/formResponse?"
                 target="hidden_iframe"
                 onsubmit="submitted=true;"
             >
                 <div class="input-group">
-                    <input type="email" placeholder="Email:" name="entry.1041503774" id="entry.1041503774">
-                    <input type="tel" placeholder="Телефон" name="entry.1570923067" id="entry.1570923067">
-                    <input type="text" placeholder="Ваше сообщение:" name="entry.140618705" id="entry.140618705">
+                    <input type="email" placeholder="Email:" name="entry.1041503774">
+                    <input type="tel" placeholder="Телефон" name="entry.1570923067">
+                    <input type="text" placeholder="Ваше сообщение:" name="entry.140618705">
                 </div>
 
                 <p class="all-fields-error hide">Заполните все поля!!!</p>
@@ -522,8 +541,6 @@
                 <span></span>
                 <span> </span>
             </div>
-
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
         </div>
     </div>
 
@@ -539,5 +556,7 @@
             </div>
         </div>
     </div>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 </body>
 </html>
