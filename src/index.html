@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Лечение онкологии в Израиле</title>
+
+    <script type="text/javascript">let submitted=false;</script>
 </head>
 <body>
     <header id="header">
@@ -494,19 +496,34 @@
     <div class="modal-form hide">
         <div class="wrapper">
             <h3>Оставьте свои контактные данные и кратко опишите проблему. Наш специалист перезвонит Вам в течение дня и проконсультирует по вопросам лечения в Израиле. Звонок для Вас бесплатный!</h3>
-            <form action="">
+
+            <form 
+                name="form"
+                id="form"
+                enctype="text/plain"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSc1dtpluesEMzPGqbWGey6Fk5wcFeW1VYjvWo7cWuhOidHrcg/formResponse?"
+                target="hidden_iframe"
+                onsubmit="submitted=true;"
+            >
                 <div class="input-group">
-                    <input type="email" placeholder="Email:">
-                    <input type="tel" placeholder="Телефон">
-                    <input type="text" placeholder="Ваше сообщение:">
+                    <input type="email" placeholder="Email:" name="entry.1041503774" id="entry.1041503774">
+                    <input type="tel" placeholder="Телефон" name="entry.1570923067" id="entry.1570923067">
+                    <input type="text" placeholder="Ваше сообщение:" name="entry.140618705" id="entry.140618705">
                 </div>
-                <button type="submit">Отправить</button>
+
+                <p class="all-fields-error hide">Заполните все поля!!!</p>
+                <p class="email-error hide">Введите корректный email!!!</p>
+                <p class="tel-error hide">Номер телефона не должен содержать буквы!!!</p>
+
+                <button type="submit" disabled>Отправить</button>
             </form>
 
             <div class="crosshair">
                 <span></span>
                 <span> </span>
             </div>
+
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
         </div>
     </div>
 
