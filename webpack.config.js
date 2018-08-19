@@ -64,6 +64,12 @@ const config = {
             options: {
               name: 'fonts/[name].[ext]',
             },
+        }, {
+            test: /\.(xml|txt)$/,
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            },
         }],
     },
 
