@@ -7,6 +7,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'prod';
 const assetsPath = path.join(__dirname, '/public');
@@ -120,6 +121,7 @@ if (isProduction) {
        'src/robots.txt',
        'src/sitemap.xml',
     ]));
+    config.plugins.push(new StyleExtHtmlWebpackPlugin());
 }
 
 fs.readdirSync(assetsPath)
