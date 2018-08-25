@@ -73,11 +73,17 @@ const config = {
             filename: './index.html',
             template: path.resolve(__dirname, './src/index.html'),
             inject: 'body',
+            minify: {
+                removeScriptTypeAttributes: true,
+            },
         }),
         new HtmlWebpackPlugin({
             filename: './404.html',
             template: path.resolve(__dirname, './src/404.html'),
             inject: 'body',
+            minify: {
+                removeScriptTypeAttributes: true,
+            },
         }),
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'async',
