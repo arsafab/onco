@@ -6,6 +6,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'prod';
 const assetsPath = path.join(__dirname, '/public');
@@ -64,12 +65,6 @@ const config = {
             options: {
               name: 'fonts/[name].[ext]',
             },
-        }, {
-            test: /\.(xml|txt)$/,
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-            },
         }],
     },
 
@@ -101,6 +96,10 @@ if (isProduction) {
     config.plugins.push(new CleanWebpackPlugin(['./public']));
     config.plugins.push(new UglifyJsPlugin());
     config.plugins.push(new FaviconsWebpackPlugin('./src/img/favicon.png'));
+    config.plugins.push(new CopyWebpackPlugin([
+       'src/robots.txt',
+       'src/sitemap.xml',
+    ]));
 }
 
 fs.readdirSync(assetsPath)
