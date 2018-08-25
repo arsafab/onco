@@ -93,6 +93,15 @@
                         transition: all .3s;
                     }
                 }
+
+                button[disabled] {
+                    cursor: default;
+                    
+                    &:hover {
+                        background: $hover;
+                        color: $white;
+                    }
+                }
             }
         }
     }

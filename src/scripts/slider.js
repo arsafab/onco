@@ -2,28 +2,29 @@ import { addActive, removeActive } from './utils/active';
 
 const indicators = document.querySelectorAll('.indicators');
 
-const showNextItems = (slider) => {
-    const sliderItems = slider.querySelectorAll('.slider-content figure');
-    const activeIndicatorIndex =
-        [...slider.querySelectorAll('span')]
-        .findIndex(span => span.classList.contains('active'))
-        + 1; // add 1 to get ability of multiply
+const defineFigureClasses = (lastActiveItemIndex, sliderItems) => {
+    sliderItems.forEach((item, i) => {
+        removeActive(item);
+        item.classList.remove('right');
+        item.classList.remove('left');
 
-    sliderItems.forEach((item) => {
-        if (item.classList.contains('active')) {
-            removeActive(item);
+        if (i < lastActiveItemIndex - 2) {
+            item.classList.add('left');
+        } else if (i > lastActiveItemIndex) {
+            item.classList.add('right');
+        } else {
+            addActive(item);
         }
     });
+};
+
+const showNextItems = (slider) => {
+    const sliderItems = slider.querySelectorAll('.slider-content figure');
+    const activeIndicatorIndex = [...slider.querySelectorAll('span')]
+            .findIndex(span => span.classList.contains('active')) + 1; // add 1 to get ability of multiply
 
     const lastActiveItemIndex = (activeIndicatorIndex * 3) - 1;
-
-    const lastActiveItem = sliderItems[lastActiveItemIndex];
-    const secondActiveItem = sliderItems[lastActiveItemIndex - 1];
-    const firstActiveItem = sliderItems[lastActiveItemIndex - 2];
-
-    addActive(lastActiveItem);
-    addActive(secondActiveItem);
-    addActive(firstActiveItem);
+    defineFigureClasses(lastActiveItemIndex, sliderItems);
 };
 
 const defineSlider = (path) => {

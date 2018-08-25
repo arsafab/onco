@@ -83,6 +83,10 @@
             &:nth-child(4) {
                 bottom: 5%;
                 right: 10%;
+
+                @media screen and (max-width: 1130px) {
+                    bottom: 1%;
+                }
             }
 
             &:nth-child(5) {
@@ -93,7 +97,7 @@
             &:nth-child(6) {
                 max-width: 300px;
                 top: 35%;
-                left: -2%;
+                left: -3.5%;
             }
 
             &:last-child {

@@ -64,6 +64,12 @@ const config = {
             options: {
               name: 'fonts/[name].[ext]',
             },
+        }, {
+            test: /\.(xml|txt)$/,
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            },
         }],
     },
 
@@ -71,6 +77,11 @@ const config = {
         new HtmlWebpackPlugin({
             filename: './index.html',
             template: path.resolve(__dirname, './src/index.html'),
+            inject: 'body',
+        }),
+        new HtmlWebpackPlugin({
+            filename: './404.html',
+            template: path.resolve(__dirname, './src/404.html'),
             inject: 'body',
         }),
         new ScriptExtHtmlWebpackPlugin({

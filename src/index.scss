@@ -28,6 +28,19 @@ button {
     outline: none;
 }
 
+button[disabled] {
+    cursor: default;
+    background: $white;
+    color: $secondary;
+    border-color: $secondary;
+
+    &:hover {
+        background: $white;
+        color: $secondary;
+        border-color: $secondary;
+    }
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -103,4 +116,100 @@ input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s eas
 
 ul {
     list-style: none;
+}
+
+@media print {
+	header, 
+	footer,
+    svg,
+    button,
+    form,
+    img,
+    .indicators,
+    .icons-block,
+    .slider-block,
+    .feedback-block,
+	.jivo-iframe-container-bottom,
+	.jivo-state-widget,
+	.jivo-collapsed,
+	.jivo_shadow,
+	.jivo_rounded_corners,
+	.jivo_gradient,
+	#jivo-iframe-container,
+	.label_39._bottom_3v._pad100_GR._init_Tk{
+		display: none !important;
+		opacity: 0 !important;
+    }
+
+	body{
+		background: #fff;
+    }
+    
+	a {
+		color: #000;
+		text-decoration: none;
+    }
+
+    h2 {
+        margin: 3rem !important;
+    }
+
+    .jumbotron-block {
+        height: 100%;
+    }
+    
+    .advantages-block .advantages-content ul {
+        list-style: square;
+        margin-top: 1rem;
+
+        li {
+            position: static;
+            max-width: 100%;
+            text-align: left;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+
+            span {
+                margin-bottom: .3rem;
+            }
+
+            &:last-child,
+            &:nth-child(3),
+            &:nth-child(6) {
+                max-width: 100%;
+            }
+
+            &:first-child {                
+                transform: none;   
+                font-size: 1.8rem;         
+            }
+
+            &:first-child span {   
+                display: inline;             
+                font-size: 2rem;
+                font-weight: 700;    
+            }
+        }
+    }
+
+    .advantages-border  {
+        display: none;
+    }
+
+    .treatment-block .treatment-content figure {
+        position: relative;
+        max-width: 90%;
+        min-height: 100%;
+        padding: 0;
+        border: 0;
+
+        &::after {
+            content: normal;
+        }
+
+        figcaption {
+            height: 100%;
+            overflow: visible;
+        }
+    }
 }
