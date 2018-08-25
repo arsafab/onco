@@ -12,6 +12,10 @@ body {
     font-size: 1.6rem; 
 }
 
+.disable-scroll {
+    overflow: hidden;
+}
+
 .container {
     position: relative;
     margin: 0 auto;

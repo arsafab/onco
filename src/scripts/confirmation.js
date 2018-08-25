@@ -1,14 +1,18 @@
+import { disableScroll, enableScroll } from './utils/scroll';
+
 const confirmation = document.querySelector('.confirmation');
 const closeConfirmationBtn = document.querySelector('.close-confirmation');
 const confirmationCrosshair = document.querySelector('.confirmation .crosshair');
 const submitButtons = document.querySelectorAll('button[type=submit]');
 
 const openConfirmation = () => {
+    disableScroll();
     confirmation.classList.remove('hide');
     confirmation.classList.add('show');
 };
 
 const closeConfirmation = () => {
+    enableScroll();
     confirmation.classList.remove('show');
     confirmation.classList.add('hide');
 

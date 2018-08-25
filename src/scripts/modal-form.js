@@ -1,3 +1,5 @@
+import { disableScroll, enableScroll } from './utils/scroll';
+
 const formTriggers = document.querySelectorAll('.modal-form-trigger');
 const modalForm = document.querySelector('.modal-form');
 const closeBtn = document.querySelector('.close-modal');
@@ -10,11 +12,13 @@ const EmailError = document.querySelector('.modal-form .email-error');
 const TelError = document.querySelector('.modal-form .tel-error');
 
 const openModalForm = () => {
+    disableScroll();
     modalForm.classList.remove('hide');
     modalForm.classList.add('show');
 };
 
 const closeModalForm = () => {
+    enableScroll();
     modalForm.classList.remove('show');
     modalForm.classList.add('hide');
 };
