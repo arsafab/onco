@@ -31,6 +31,7 @@ const closeConfirmation = () => {
 
 const backdropConfirmationClick = (event) => {
     if (event.target.classList.contains('confirmation')) {
+        enableScroll();
         confirmation.classList.remove('show');
         confirmation.classList.add('hide');
     }

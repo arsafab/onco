@@ -25,6 +25,7 @@ const closeModalForm = () => {
 
 const backdropFormClick = (event) => {
     if (event.target.classList.contains('modal-form')) {
+        enableScroll();
         modalForm.classList.remove('show');
         modalForm.classList.add('hide');
     }
