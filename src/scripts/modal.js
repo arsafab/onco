@@ -1,3 +1,5 @@
+import { disableScroll, enableScroll } from './utils/scroll';
+
 const triggers = document.querySelectorAll('.modal-trigger');
 const modal = document.querySelector('.modal');
 const closeBtn = document.querySelector('.close-modal');
@@ -7,6 +9,8 @@ const modalBody = modal.firstElementChild.firstElementChild;
 
 const openModal = (event) => {
     let { target } = event;
+
+    disableScroll();
 
     modal.classList.remove('hide');
     modal.classList.add('show');
@@ -36,6 +40,7 @@ const openModal = (event) => {
 };
 
 const closeModal = () => {
+    enableScroll();
     modal.classList.remove('show');
     modal.classList.add('hide');
 };
