@@ -31,6 +31,10 @@
         }
     }
 
+    .body {
+        margin: 45px 0;
+    }
+
     .footer {
         display: flex;
         justify-content: center;
@@ -80,11 +84,6 @@
             stroke: $primary;
             stroke-miterlimit:10;
         }
-    }
-
-    h3 {
-        position: relative;
-        right: 75px;
     }
 }
 
