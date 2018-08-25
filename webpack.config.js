@@ -95,7 +95,21 @@ const config = {
 if (isProduction) {
     config.plugins.push(new CleanWebpackPlugin(['./public']));
     config.plugins.push(new UglifyJsPlugin());
-    config.plugins.push(new FaviconsWebpackPlugin('./src/img/favicon.png'));
+    config.plugins.push(new FaviconsWebpackPlugin({
+        logo: './src/img/favicon.png',
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: false,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          opengraph: false,
+          twitter: false,
+          yandex: false,
+          windows: false,
+        },
+    }));
     config.plugins.push(new CopyWebpackPlugin([
        'src/robots.txt',
        'src/sitemap.xml',
