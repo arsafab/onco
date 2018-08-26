@@ -87,7 +87,7 @@ const config = {
             },
         }),
         new ScriptExtHtmlWebpackPlugin({
-            defaultAttribute: 'async',
+            defaultAttribute: 'defer',
         }),
         extractSass,
     ],
@@ -124,14 +124,15 @@ if (isProduction) {
     config.plugins.push(new StyleExtHtmlWebpackPlugin());
 }
 
-fs.readdirSync(assetsPath)
-.map((fileName) => {
-    if (['.css', '.js'].includes(path.extname(fileName))) {
-        return fs.unlinkSync(`${assetsPath}/${fileName}`);
-    }
+fs
+    .readdirSync(assetsPath)
+    .map((fileName) => {
+        if (['.css', '.js'].includes(path.extname(fileName))) {
+            return fs.unlinkSync(`${assetsPath}/${fileName}`);
+        }
 
-    return '';
-});
+        return '';
+    });
 
 module.exports = config;
 

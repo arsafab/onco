@@ -11,3 +11,5 @@ import './modal-form';
 import './sharing-icons';
 import './confirmation';
 import './forms';
+import './utils/metrika';
+import './utils/ga';
