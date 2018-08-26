@@ -7,6 +7,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'prod';
 const assetsPath = path.join(__dirname, '/public');
@@ -73,11 +74,17 @@ const config = {
             filename: './index.html',
             template: path.resolve(__dirname, './src/index.html'),
             inject: 'body',
+            minify: {
+                removeScriptTypeAttributes: true,
+            },
         }),
         new HtmlWebpackPlugin({
             filename: './404.html',
             template: path.resolve(__dirname, './src/404.html'),
             inject: 'body',
+            minify: {
+                removeScriptTypeAttributes: true,
+            },
         }),
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'async',
@@ -95,11 +102,26 @@ const config = {
 if (isProduction) {
     config.plugins.push(new CleanWebpackPlugin(['./public']));
     config.plugins.push(new UglifyJsPlugin());
-    config.plugins.push(new FaviconsWebpackPlugin('./src/img/favicon.png'));
+    config.plugins.push(new FaviconsWebpackPlugin({
+        logo: './src/img/favicon.png',
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: false,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          opengraph: false,
+          twitter: false,
+          yandex: false,
+          windows: false,
+        },
+    }));
     config.plugins.push(new CopyWebpackPlugin([
        'src/robots.txt',
        'src/sitemap.xml',
     ]));
+    config.plugins.push(new StyleExtHtmlWebpackPlugin());
 }
 
 fs.readdirSync(assetsPath)

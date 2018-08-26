@@ -47,6 +47,7 @@ const closeModal = () => {
 
 const backdropClick = (event) => {
     if (event.target.classList.contains('modal')) {
+        enableScroll();
         modal.classList.remove('show');
         modal.classList.add('hide');
     }
