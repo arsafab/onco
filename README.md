@@ -1,6 +1,6 @@
 [![Deploy Status](https://travis-ci.org/arsafab/onco.svg?branch=master)](https://travis-ci.org/arsafab/onco)
 
-This <a href="https://arsafab.github.io/onco/">landing page</a> is about treatment in Israel. 
+This <a href="https://israel-onco.de">landing page</a> is about treatment in Israel. 
 
 ### `npm start`
 
