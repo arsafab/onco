@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 5%;
+    bottom: 3%;
     right: 5%;
     height: 100px;
     width: 100px;
@@ -14,8 +14,8 @@
     z-index: 15;
 
     @media screen and (max-width: 400px) {
-        height: 80px;
-        width: 80px;
+        height: 72px;
+        width: 72px;
     }
 
     &:hover {
@@ -42,8 +42,8 @@
         border-radius: 50%;
 
         @media screen and (max-width: 400px) {
-            width: 66px; 
-            height: 66px;
+            width: 58px; 
+            height: 59px;
         }
     }
 }
