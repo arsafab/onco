@@ -3,19 +3,18 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 3%;
+    bottom: 8%;
     right: 5%;
-    height: 100px;
-    width: 100px;
+    height: 72px;
+    width: 72px;
     border-radius: 50%;
     background: $primary;
     transform: rotate(180deg);
     cursor: pointer;
     z-index: 15;
 
-    @media screen and (max-width: 400px) {
-        height: 72px;
-        width: 72px;
+    @media screen and (max-width: 792px) {
+        bottom: 3%;
     }
 
     &:hover {
@@ -36,15 +35,10 @@
         position: absolute;
         top: 6px;
         left: 6px;
-        width: 86px; 
-        height: 86px;
+        width: 58px; 
+        height: 59px;
         border: .1rem solid $white;
         border-radius: 50%;
-
-        @media screen and (max-width: 400px) {
-            width: 58px; 
-            height: 59px;
-        }
     }
 }
 
